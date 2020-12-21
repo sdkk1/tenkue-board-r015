@@ -6,10 +6,16 @@ RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
     context '新規登録ができる場合' do
       it '名前・メールアドレス・パスワードが入力されている' do
+        expect(user).to be_valid
       end
       it 'メールアドレスが半角文字だけで尚且つ@が挿入されている' do
+        user.email = 'test@test.com'
+        expect(user).to be_valid
       end
       it 'パスワードが8文字以上32文字以内で半角英数字が挿入されている' do
+        user.password = '1234567a'
+        user.password_confirmation = user.password
+        expect(user).to be_valid
       end
     end
     context '新規登録ができない場合' do
