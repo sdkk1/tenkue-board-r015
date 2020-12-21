@@ -10,6 +10,7 @@
       <%# each文で投稿一覧を表示すること %>
       <% if @posts.present? %>
         <%= render @posts %>
+        <%= paginate @posts %>
       <% else %>
         まだ投稿されたスレッドはありません。
       <% end %>
