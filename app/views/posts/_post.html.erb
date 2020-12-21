@@ -10,23 +10,23 @@
         </div>
       </div>  
       <div class="post__middle_box">
-        <span>投稿内容</span>
+        <span><%= simple_format(post.content) %></span>
       </div>
       <div class="post__bottom_box">
         <ul class="post__bottom_box__user_actions">
           <li>
             <i class="far fa-comment-alt"></i>
-            <span>コメント数</span>
+            <span><%#= post.comments.count if post.comments.present? %></span>
           </li>
           <li>
             <i class="far fa-heart"></i>
-            <span>いいね数</span>
+            <span><%#= post.likes.count if post.likes.present? %></span>
           </li>
         </ul>
         <% if post.user == current_user %>
           <ul class="post__bottom_box__admin_actions">
-            <li>編集</li>
-            <li>削除</li>
+            <li><%= link_to '編集', edit_post_path(post) %></li>
+            <li><%= link_to '削除', post_path(post), method: :delete %></li>
           </ul>
         <% end %>
       </div>
