@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.preload(:user)
+    @posts = Post.order(created_at: :desc).preload(:user)
   end
 end
