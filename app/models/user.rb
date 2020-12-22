@@ -8,6 +8,6 @@ class User < ApplicationRecord
     validates :password, format: { with: /\A(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-z0-9]{8,32})\z/ }, confirmation: true
   end
 
-  has_many :posts
-  has_many :comments
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
