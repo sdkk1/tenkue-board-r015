@@ -17,12 +17,12 @@ RSpec.describe Post, type: :model do
       it '投稿の内容が入力されていない' do
         post.content = nil
         post.valid?
-        expect(post.errors.full_messages).to include "Content can't be blank"
+        expect(post.errors.full_messages).to include "投稿内容を入力してください"
       end
       it '内容が141文字以上で入力されている' do
         post.content = Faker::Lorem.characters(number: 141)
         post.valid?
-        expect(post.errors.full_messages).to include "Content is too long (maximum is 140 characters)"
+        expect(post.errors.full_messages).to include "投稿内容は140文字以内で入力してください"
       end
     end
   end
