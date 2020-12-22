@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:post) { build(:post) }
+  let(:user) { create(:user) }
+  let(:post) { build(:post, user_id: user.id) }
 
   describe '掲示板新規投稿' do
     context '新規投稿ができる場合' do
@@ -23,6 +24,12 @@ RSpec.describe Post, type: :model do
         post.content = Faker::Lorem.characters(number: 141)
         post.valid?
         expect(post.errors.full_messages).to include "投稿内容は140文字以内で入力してください"
+      end
+      it '投稿に紐づくユーザーがいない' do
+        post.user_id = nil
+        post.valid?
+        binding.pry
+        expect(post.errors.full_messages).to include "ユーザーを入力してください"
       end
     end
   end
