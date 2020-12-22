@@ -22,53 +22,53 @@ RSpec.describe User, type: :model do
       it '名前が入力されていない' do
         user.name = nil
         user.valid?
-        expect(user.errors.full_messages).to include "Name can't be blank"
+        expect(user.errors.full_messages).to include "名前を入力してください"
       end
       it 'メールアドレスが入力されていない' do
         user.email = nil
         user.valid?
-        expect(user.errors.full_messages).to include "Email can't be blank"
+        expect(user.errors.full_messages).to include "メールアドレスを入力してください"
       end
       it 'メールアドレスに全角文字が挿入されている' do
         user.email = 'ｔｅｓｔ@test.com'
         user.valid?
-        expect(user.errors.full_messages).to include "Email is invalid"
+        expect(user.errors.full_messages).to include "メールアドレスは不正な値です"
       end
       it 'パスワードが入力されていない' do
         user.password = nil
         user.valid?
-        expect(user.errors.full_messages).to include "Password can't be blank"
+        expect(user.errors.full_messages).to include "パスワードを入力してください"
       end
       it 'パスワードが7文字以下になっている' do
         user.password = '123456a'
         user.valid?
-        expect(user.errors.full_messages).to include "Password is invalid"
+        expect(user.errors.full_messages).to include "パスワードは不正な値です"
       end
       it 'パスワードが33文字以上になっている' do
         user.password = '12345678901234567890123456789012a'
         user.valid?
-        expect(user.errors.full_messages).to include "Password is invalid"
+        expect(user.errors.full_messages).to include "パスワードは不正な値です"
       end
       it 'パスワードに半角数字が挿入されていない' do
         user.password = '12345678'
         user.valid?
-        expect(user.errors.full_messages).to include "Password is invalid"
+        expect(user.errors.full_messages).to include "パスワードは不正な値です"
       end
       it 'パスワードに半角英字が挿入されていない' do
         user.password = 'abcdefgh'
         user.valid?
-        expect(user.errors.full_messages).to include "Password is invalid"
+        expect(user.errors.full_messages).to include "パスワードは不正な値です"
       end
       it '確認用パスワードが入力されていない' do
         user.password_confirmation = nil
         user.valid?
-        expect(user.errors.full_messages).to include "Password confirmation can't be blank"
+        expect(user.errors.full_messages).to include "確認用パスワードを入力してください"
       end
       it '確認用パスワードとパスワードが一致しない' do
         user.password = 'a1234567'
         user.password_confirmation = 'b1234567'
         user.valid?
-        expect(user.errors.full_messages).to include "Password confirmation doesn't match Password"
+        expect(user.errors.full_messages).to include "確認用パスワードとパスワードの入力が一致しません"
       end
     end
   end
