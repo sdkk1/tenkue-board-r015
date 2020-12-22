@@ -28,7 +28,6 @@ RSpec.describe Post, type: :model do
       it '投稿に紐づくユーザーがいない' do
         post.user_id = nil
         post.valid?
-        binding.pry
         expect(post.errors.full_messages).to include "ユーザーを入力してください"
       end
     end
