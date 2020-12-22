@@ -17,12 +17,12 @@ RSpec.describe Comment, type: :model do
       it 'コメントの内容が入力されていない' do
         comment.comment = nil
         comment.valid?
-        expect(comment.errors.full_messages).to include "Comment can't be blank"
+        expect(comment.errors.full_messages).to include "コメント内容を入力してください"
       end
       it 'コメント内容が141文字以上で入力されている' do
         comment.comment = Faker::Lorem.characters(number: 141)
         comment.valid?
-        expect(comment.errors.full_messages).to include "Comment is too long (maximum is 140 characters)"
+        expect(comment.errors.full_messages).to include "コメント内容は140文字以内で入力してください"
       end
     end
   end
