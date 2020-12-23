@@ -12,8 +12,13 @@ RSpec.describe User, type: :model do
         user.email = 'test@test.com'
         expect(user).to be_valid
       end
-      it 'パスワードが8文字以上32文字以内で半角英数字が挿入されている' do
+      it 'パスワードが8文字以上で半角英数字が挿入されている' do
         user.password = '1234567a'
+        user.password_confirmation = user.password
+        expect(user).to be_valid
+      end
+      it 'パスワードが32文字以内で半角英数字が挿入されている' do
+        user.password = '1234567890123456789012345678901a'
         user.password_confirmation = user.password
         expect(user).to be_valid
       end
