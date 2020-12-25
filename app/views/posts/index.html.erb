@@ -1,0 +1,17 @@
+<div class="post_wrapper">
+  <div class="post_wrapper__header">
+    <h3>
+      <span>投稿一覧</span>
+    </h3>
+  </div>
+  <div class="post_wrapper__content">
+    <ul class="post_wrapper__content__post_list">
+      <% if @posts.present? %>
+        <%= render @posts %>
+        <%= paginate @posts %>
+      <% else %>
+        まだ投稿されたスレッドはありません。
+      <% end %>
+    </ul>
+  </div>
+</div>
