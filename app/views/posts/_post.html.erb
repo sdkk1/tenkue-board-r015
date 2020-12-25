@@ -1,4 +1,4 @@
-<%= link_to post do %>
+<%#= link_to post do %>
   <li>
     <div class="post">
       <div class="post__top_box">
@@ -8,7 +8,7 @@
         <div class="post__top_box__time">
           <span>投稿日時：<%= l post.created_at %></span>
         </div>
-      </div>  
+      </div>
       <div class="post__middle_box">
         <span><%= simple_format(post.content) %></span>
       </div>
@@ -25,11 +25,11 @@
         </ul>
         <% if post.user == current_user %>
           <ul class="post__bottom_box__admin_actions">
-            <li><%= link_to '編集', edit_post_path(post) %></li>
-            <li><%= link_to '削除', post_path(post), method: :delete %></li>
+            <li><%#= link_to '編集', edit_post_path(post) %></li>
+            <li><%#= link_to '削除', post_path(post), method: :delete %></li>
           </ul>
         <% end %>
       </div>
     </div>
   </li>
-<% end %>
+<%# end %>
