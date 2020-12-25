@@ -25,8 +25,8 @@
         </ul>
         <% if post.user == current_user %>
           <ul class="post__bottom_box__admin_actions">
-            <li>編集</li>
-            <li>削除</li>
+            <li><%= link_to '編集', '#' %></li>
+            <li><%= link_to '削除', '#' %></li>
           </ul>
         <% end %>
       </div>
