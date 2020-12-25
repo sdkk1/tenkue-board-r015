@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # rootパスを設定しないとゲストログインはエラーとなる　→　「掲示板一覧表示機能」に合わせてrootパスを設定
-  # root 'posts#index'
+  root to: 'posts#index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     passwords: 'users/passwords'
