@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save ? redirect_to root_path : render 'new'
+    @post.save ? (redirect_to root_path) : (render 'new')
   end
 
   private
