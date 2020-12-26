@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net" modified="2020-12-23T05:24:33.809Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.44.2 Chrome/78.0.3904.130 Electron/7.1.11 Safari/537.36" etag="w7KGxJK7ZD9sPbd9uLxl" version="14.1.1" type="embed">
+    <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        <mxGraphModel dx="558" dy="599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="4" target="95" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【正規表現・バリデーション】&lt;br&gt;&lt;br&gt;担当：やすのりさん&lt;br&gt;期限：12/24&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="25" y="230" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;font style=&quot;font-size: 30px&quot;&gt;転クエ　共同開発　開発フロー&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="367" y="10" width="435" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="95" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="95" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="740" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="95" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【掲示板一覧表示機能】&lt;br&gt;&lt;br&gt;担当：いさおさん&lt;br&gt;期限：12/26&lt;br&gt;備考：rootパス&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="230" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="100" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="100" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【ゲストログイン機能】&lt;br&gt;&lt;br&gt;担当：けいた&lt;br&gt;期限：12/28&lt;br&gt;備考：ゲストログイン後&lt;br&gt;rootパスへ遷移&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="80" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="105" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="105" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【掲示板投稿機能】&lt;br&gt;&lt;br&gt;担当：いさおさん&lt;br&gt;期限：12/30&lt;br&gt;備考：ヘッダーから遷移&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="380" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="112" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="425" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【掲示板詳細表示機能】&lt;br&gt;&lt;br&gt;担当：やすのりさん&lt;br&gt;期限：12/29&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="230" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="113" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="740" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【掲示板編集・削除機能】&lt;br&gt;&lt;br&gt;担当：けいた&lt;br&gt;期限：1/4&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="530" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="115" target="112" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【コメント投稿機能】&lt;br&gt;&lt;br&gt;担当：けいた&lt;br&gt;期限：1/2&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="745" y="230" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="118" target="115" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【コメント編集・削除機能】&lt;br&gt;&lt;br&gt;担当：いさおさん&lt;br&gt;期限：1/6&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="985" y="230" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;" parent="1" source="123" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="740" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" value="&lt;font style=&quot;font-size: 11px&quot;&gt;【いいね機能】&lt;br&gt;&lt;br&gt;担当：やすのりさん&lt;br&gt;期限：1/4&lt;br&gt;備考：&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="680" width="160" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
