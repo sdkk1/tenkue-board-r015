@@ -9,18 +9,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(content: post_params[:text], user_id: current_user.id)
-    if @post.save
-      flash[:success] = '投稿に成功しました'
-      redirect_to root_path
-    else
-      flash[:alert] = '投稿に失敗しました'
-      render 'new'
-    end
+    @post = Post.new(post_params)
+    @post.save ? redirect_to root_path : render 'new'
   end
 
   private
   def post_params
-    params.require(:post).permit(:text)
+    params.require(:post).permit(:content).merge(user_id: current_user.id)
   end
 end
