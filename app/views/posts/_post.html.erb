@@ -19,8 +19,10 @@
             <span><%#= post.comments.count if post.comments.present? %></span>
           </li>
           <li>
-            <i class="far fa-heart"></i>
-            <span><%#= post.likes.count if post.likes.present? %></span>
+            <%= link_to post_likes_path(post.id), method: :post do %>
+              <i class="far fa-heart"></i>
+              <span><%= post.likes.count if post.likes.present? %></span>
+            <% end %>
           </li>
         </ul>
         <% if post.user == current_user %>
