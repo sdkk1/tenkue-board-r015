@@ -1,17 +1,17 @@
 <div class="post_wrapper">
   <div class="post_wrapper__content">
     <div class="post_wrapper__content__post_form">
-      <%= form_with model: @post, local: true do |f| %>
+      <%= form_with model: @post, local: true do |form| %>
         <h3>
           <span>新規投稿</span>
         </h3>
         <div class="form_area">
           <%= render partial: 'templates/error_messages', locals: { post: @post } %>
           <div class="form_area__field">
-            <%= f.text_area :content, placeholder: '投稿内容を入力', rows: 10 %>
+            <%= form.text_area :content, placeholder: '投稿内容を入力', rows: 10 %>
           </div>
           <div class="form_area__action">
-            <%= f.submit '投稿', class: 'form_area__action__btn' %>
+            <%= form.submit '投稿', class: 'form_area__action__btn' %>
           </div>
       </div>
       <% end %>
