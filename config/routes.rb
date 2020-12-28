@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
-  resources :posts, only: [:show]
+  resources :posts, only: [:show, :new, :create]
 end
