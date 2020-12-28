@@ -21,6 +21,9 @@ ja:
         comment: コメント内容
         user: ユーザー
         post: 投稿
+      like:
+        user: ユーザー
+        post: 投稿
   date:
     abbr_day_names:
     - 日
