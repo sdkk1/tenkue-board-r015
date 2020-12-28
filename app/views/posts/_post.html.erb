@@ -19,17 +19,7 @@
             <span><%#= post.comments.count if post.comments.present? %></span>
           </li>
           <li>
-            <% if user_signed_in? && Like.find_by(user_id: current_user.id, post_id: post.id) %>
-              <%= link_to "/posts/#{post.id}/likes/#{post.likes.ids}", method: :delete do %>
-                <i class="far fa-heart"></i>
-                <span><%= post.likes.count if post.likes.present? %></span>
-              <% end %>
-            <% else %>
-              <%= link_to post_likes_path(post.id), method: :post do %>
-                <i class="far fa-heart"></i>
-                <span><%= post.likes.count if post.likes.present? %></span>
-              <% end %>
-            <% end %>
+            <%= render partial: 'like', locals: { post: post } %>
           </li>
         </ul>
         <% if post.user == current_user %>
