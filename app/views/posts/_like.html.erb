@@ -1,6 +1,6 @@
 <% if user_signed_in? && Like.find_by(user_id: current_user.id, post_id: post.id) %>
-  <%= link_to "/posts/#{post.id}/likes/#{post.likes.ids}", method: :delete do %>
-    <i class="far fa-heart"></i>
+  <%= link_to "/posts/#{post.id}/likes/#{post.likes.ids}", class: 'post_liked', method: :delete do %>
+    <i class="fas fa-heart "></i>
     <span><%= post.likes.count if post.likes.present? %></span>
   <% end %>
 <% else %>
