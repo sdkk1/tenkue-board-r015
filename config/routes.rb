@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
+  resources :posts, only: [:show, :new, :create] do
+    resources :likes, only: [:create, :destroy]
+  end
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     passwords: 'users/passwords'
@@ -8,5 +11,4 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
-  resources :posts, only: [:show, :new, :create]
 end

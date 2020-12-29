@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @posts = Post.preload(:user).page(params[:page]).per(5).order(created_at: :desc)
+    @posts = Post.eager_load(:user).preload(:likes).page(params[:page]).per(5).order(created_at: :desc)
   end
 
   def show
@@ -20,6 +21,6 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:content).merge(user_id: current_user.id)
-  end 
-  
+  end
+
 end
