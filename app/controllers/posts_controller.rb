@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  
   def index
     @posts = Post.preload(:user).page(params[:page]).per(5).order(created_at: :desc)
   end
@@ -15,6 +16,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save ? (redirect_to root_path) : (render 'new')
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
   end
 
   private
