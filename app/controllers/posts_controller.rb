@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :post_owner_confirmation, only: [:edit, :update]
+  before_action :post_owner_confirmation, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.preload(:user).page(params[:page]).per(5).order(created_at: :desc)
@@ -27,6 +27,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post.destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private
@@ -36,7 +38,7 @@ class PostsController < ApplicationController
 
   def post_owner_confirmation
     post = Post.find(params[:id])
-    current_user.posts.include?(post) ? @post = post : redirect_back(fallback_location: root_path)
+    current_user.posts.include?(post) ? @post = post : (redirect_to root_path)
   end
   
 end
