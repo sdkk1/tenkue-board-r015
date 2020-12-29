@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  
+  before_action :post_owner_confirmation, only: [:edit, :update]
+
   def index
     @posts = Post.preload(:user).page(params[:page]).per(5).order(created_at: :desc)
   end
@@ -19,21 +20,23 @@ class PostsController < ApplicationController
   end
 
   def edit
-    post = Post.find(params[:id])
-    current_user.posts.include?(post) ? @post = post : redirect_back(fallback_location: root_path)
   end
 
   def update
-
+    @post.update(post_params) ? (redirect_to @post) : (render 'edit')
   end
 
   def destroy
-
   end
 
   private
   def post_params
     params.require(:post).permit(:content).merge(user_id: current_user.id)
-  end 
+  end
+
+  def post_owner_confirmation
+    post = Post.find(params[:id])
+    current_user.posts.include?(post) ? @post = post : redirect_back(fallback_location: root_path)
+  end
   
 end
