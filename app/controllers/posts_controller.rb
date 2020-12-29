@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_back(fallback_location: root_path)
+    redirect_to root_path
   end
 
   private
