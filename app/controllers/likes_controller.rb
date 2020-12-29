@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :destroy]
 
   def create
     current_user.likes.create(post_id: params[:post_id])
