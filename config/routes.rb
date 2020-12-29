@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :posts, only: [:show, :new, :create] do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy, :update, :edit]
   end
 end
