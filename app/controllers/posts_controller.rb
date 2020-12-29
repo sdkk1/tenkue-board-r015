@@ -19,7 +19,8 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    post = Post.find(params[:id])
+    current_user.posts.include?(post) ? @post = post : redirect_back(fallback_location: root_path)
   end
 
   def update
