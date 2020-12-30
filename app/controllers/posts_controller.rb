@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :post_owner_confirmation, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.preload(:user).page(params[:page]).per(5).order(created_at: :desc)
+    @posts = Post.eager_load(:user).preload(:likes).page(params[:page]).per(5).order(created_at: :desc)
   end
 
   def show
@@ -40,5 +40,4 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     current_user.posts.include?(post) ? @post = post : (redirect_to root_path)
   end
-  
 end

@@ -19,8 +19,7 @@
             <span><%#= post.comments.count if post.comments.present? %></span>
           </li>
           <li>
-            <i class="far fa-heart"></i>
-            <span><%#= post.likes.count if post.likes.present? %></span>
+            <%= render partial: 'like', locals: { post: post } %>
           </li>
         </ul>
         <% if post.user == current_user %>
