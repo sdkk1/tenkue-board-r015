@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save ? (redirect_to root_path) : (render 'new')
+    @post.save ? (redirect_to_root) : (render 'new')
   end
 
   def edit
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to root_path
+    redirect_to_root
   end
 
   private
@@ -39,5 +39,9 @@ class PostsController < ApplicationController
   def post_owner_confirmation
     post = Post.find(params[:id])
     current_user.posts.include?(post) ? @post = post : (redirect_to root_path)
+  end
+
+  def redirect_to_root
+    redirect_to root_path
   end
 end
