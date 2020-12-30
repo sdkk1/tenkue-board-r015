@@ -71,3 +71,4 @@ gem 'data-confirm-modal'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'rails-i18n'
+gem "gretel"

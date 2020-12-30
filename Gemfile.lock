@@ -101,6 +101,9 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gretel (4.2.0)
+      actionview (>= 5.1, < 7.0)
+      railties (>= 5.1, < 7.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
@@ -280,6 +283,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   font-awesome-sass
+  gretel
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
@@ -292,7 +296,6 @@ DEPENDENCIES
   rails-i18n
   rspec-rails
   sass-rails (~> 5.0)
-  selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
