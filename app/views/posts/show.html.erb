@@ -33,8 +33,7 @@
               <span><%= @post.comments.count %></span>
             </li>
             <li>
-              <i class="far fa-heart"></i>
-              <span>0</span><%# いいね機能実装時に表示が切り替わる様に変更予定 %>
+              <%= render partial: 'like', locals: { post: @post } %>
             </li>
           </ul>
             <% if @post.user == current_user %>
