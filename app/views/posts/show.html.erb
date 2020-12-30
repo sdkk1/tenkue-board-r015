@@ -33,7 +33,7 @@
               <span><%= @post.comments.count %></span>
             </li>
             <li>
-              <%= render partial: 'like', locals: { post: @post } %>
+              <%= render partial: 'posts/like', locals: { post: @post } %>
             </li>
           </ul>
             <% if @post.user == current_user %>
