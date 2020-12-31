@@ -1,0 +1,9 @@
+<div class="form_area">
+  <%= render partial: 'templates/error_messages', locals: { post: @post } %>
+  <div class="form_area__field">
+    <%= form.text_area :content, placeholder: '投稿内容を入力', rows: 10 %>
+  </div>
+  <div class="form_area__action">
+    <%= form.submit '投稿', class: 'form_area__action__btn' %>
+  </div>
+</div>
