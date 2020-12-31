@@ -3,5 +3,5 @@ crumb :root do
 end
 
 crumb :post do |post|
-  link "#{post.user.name}さんの投稿(#{post.id})", post_path
+  link "#{post.user.name}さんの投稿(#{post.id})", post_path(post)
 end
