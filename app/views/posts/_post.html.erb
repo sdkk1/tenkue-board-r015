@@ -16,7 +16,7 @@
         <ul class="post__bottom_box__user_actions">
           <li>
             <i class="far fa-comment-alt"></i>
-            <span><%#= post.comments.count if post.comments.present? %></span>
+            <span><%= post.comments.count %></span>
           </li>
           <li>
             <%= render partial: 'like', locals: { post: post } %>
