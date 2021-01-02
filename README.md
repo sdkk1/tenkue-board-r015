@@ -6,10 +6,12 @@ ver.1.00
 
 ## 成果物
 掲示板アプリ
-サンプル→ [転クエ掲示板](https://tenkue-board.herokuapp.com/)
+- サンプル → [転クエ掲示板](https://tenkue-board.herokuapp.com/)
 
-今回の成果物→ [転クエ掲示板-r015](https://tenkue-board-r015.herokuapp.com/)
-開発に使用したGitHub→ [tenkue-board-r015](https://github.com/Yasunori-aloha/tenkue-board-r015)
+- 今回の成果物 → [転クエ掲示板-r015](https://tenkue-board-r015.herokuapp.com/)
+
+- 開発に使用したGitHub → [tenkue-board-r015](https://github.com/Yasunori-aloha/tenkue-board-r015)
+※各プルリクエストでコードレビューの様子が確認できます。
 
 ## 参加要件
 - 環境構築が完了し、指定バージョンに揃えられること（詳細は下記）
